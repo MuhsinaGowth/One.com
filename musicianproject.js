@@ -6,80 +6,50 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-let WEBSITE_TITLE = "Weather Forecasting System with Data Mining";
-let GMB_KEY = "Research paper";
+let WEBSITE_TITLE = "Celestial Beings";
+let GMB_KEY = "Guitarist";
 let PLACE_COUNTRY = "Copenhagen, Denmark";
-let PRONOUN = "First person";
+let PRONOUN = "Group";
 
 let queryObj = {
   welcome: {
-    query: `For a welcome section of a ${GMB_KEY},write a relavent headline	that mention the name of the project also write 1 paragraph that summarize its purpose The headline should contain 7-10 words and 50 - 60 characters. The paragraph should contain 20 words 120 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}.`,
+    query: `For a welcome section of ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 15-20 words and 140-150 characters in a welcoming and engaging tone. Write it as ${PRONOUN}.`,
 
     responseFormat: { header: "..", paragraph: ".." },
   },
 
   about: {
     query: `For an about section of a ${GMB_KEY},write a relavent headline and write 1 paragraph that mentions the Objectives and Goals of the project and another paragraph that talks about how it addresses a specific need or problem. The headline should contain 3-4 words and 20-30 characters. Each paragraph should contain 30 words and 250 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}. Don't use the word 'about'.`,
-    responseFormat: {
-      header: "..",
-      parts: [{ paragraph: ".." }, { paragraph: ".." }],
-    },
-  },
-
-  gallery: {
-    query: `For a gallery section of a ${GMB_KEY}, write a catchy headline. The headline should contain 3-4 words and 20-30 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}. Don't use the word 'gallery'.`,
-    responseFormat: { header: ".." },
-  },
-
-  methodology: {
-    query: `For a methodology section of a ${GMB_KEY}, write a relavent headline. Write 3 paragraphs, the first explaining the research done, the second paragraph talking about the steps taken to complete the project to be writen in points and in the last paragraph mention the processes and hurdles faced. The headline should contain 3-4 words and 20-30 characters. Each paragraph should contain 70 words and 450 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}.`,
-    responseFormat: {
-      header: "..",
-      parts: [{ paragraph: ".." }, { paragraph: ".." }, { paragraph: ".." }],
-    },
-  },
-
-  results: {
-    query: `For a results section of a ${GMB_KEY}, write a catchy headline and write 2 paragraphs that showcases the outcomes and results of this project. The headline should contain 3-4 words and 20-30 characters. Each paragraph should contain 30 words and 250 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}. Don't use the word 'results'.`,
-    responseFormat: {
-      header: "..",
-      parts: [{ paragraph: ".." }, { paragraph: ".." }],
-    },
-  },
-
-  timeline: {
-    query: `For a timeline section of a ${GMB_KEY}, write an appropriate headline and a paragraph that briefly discribes the overall timeline of this project. The headline should contain 3-4 words and 20-30 characters. The paragraph should contain 20 words and 120 characters. Write 5 headlines and paragraphs that talks about the stages of the project mentioning the time as well. The headline should contain 3-4 words and 20-30 characters. The paragraph should contain 20 words and 120 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}. Don't use the word 'timeline'.`,
-    responseFormat: {
-      header: "..",
-      paragraph: "..",
-      parts: [
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-      ],
-    },
-  },
-
-  our_team: {
-    query: `Write a headline for a our team section of a ${GMB_KEY} that is called ${WEBSITE_TITLE}. Then write a paragraph that talks about their experience. The headline should be of 4-5 words, 30-40 characters and the paragraph in exactly 40 - 50 words, 300 - 380 characters. Don't use the words 'our team'`,
     responseFormat: { header: "..", paragraph: ".." },
   },
-  resources: {
-    query: `Write eye-catchy headline and preview paragraph each for 4 engaging and relavent resources to a ${GMB_KEY}. Each point should contain a headline in 2-4 words, 10-25 characters and the preview paragraph in 10-15 words, 60 - 80 characters`,
-    responseFormat: {
-      parts: [
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-        { header: "..", paragraph: ".." },
-      ],
-    },
+
+  latest_release: {
+    query: `For the latest release section of a ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 15-30 words and 90-100 characters in an exciting and intriguing tone. Write it as ${PRONOUN}.`,
+    responseFormat: { header: "..", paragraph: ".." },
   },
 
-  contact: {
-    query: `Write a concise and clear headline for a contact us section that encourages visitors connect with them to get updates on the project. Then write a supporting paragraph of 20 words for it `,
+  upcoming_tours: {
+    query: `For the upcoming tours section of a ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 25-40 words and 140-200 characters in an Exciting and Anticipatory tone. Write it as ${PRONOUN}. Include sample destinations. `,
+    responseFormat: { header: "..", paragraph: ".." },
+  },
+
+  merch_store: {
+    query: `For the merch store section of a ${GMB_KEY}  called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 20-40 words and 120-200 characters in an exclusive and trendy tone. Write it as a ${PRONOUN}.`,
+    responseFormat: { header: "..", paragraph: ".." },
+  },
+
+  media: {
+    query: `For the media section of a ${GMB_KEY}  called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 10-15 words and 90-100 characters in an informative and engaging tone. Write it as a ${PRONOUN}.`,
+    responseFormat: { header: "..", paragraph: ".." },
+  },
+
+  contact_us: {
+    query: `For the contact us section of a ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 10-30 words and 50-180characters in an approachable and professional tone. Write it as a ${PRONOUN}.`,
+    responseFormat: { header: "..", paragraph: ".." },
+  },
+
+  social_channels: {
+    query: `For the social channels section of a ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 10-20 words and 60-120 characters in a friendly and invitational tone. Write it as a ${PRONOUN}.`,
     responseFormat: { header: "..", paragraph: ".." },
   },
 };
