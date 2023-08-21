@@ -19,7 +19,7 @@ let queryObj = {
   },
 
   about: {
-    query: `For an about section of a ${GMB_KEY},write a relavent headline and write 1 paragraph that mentions the Objectives and Goals of the project and another paragraph that talks about how it addresses a specific need or problem. The headline should contain 3-4 words and 20-30 characters. Each paragraph should contain 30 words and 250 characters. Write it as a ${PRONOUN}. The project is called ${WEBSITE_TITLE}. Don't use the word 'about'.`,
+    query: `For an about section of ${GMB_KEY} called ${WEBSITE_TITLE}, write a relevant headline and paragraph of 40-50 words and 200-300 characters in an inspirational and authentic tone. Write it as ${PRONOUN}.`,
     responseFormat: { header: "..", paragraph: ".." },
   },
 
